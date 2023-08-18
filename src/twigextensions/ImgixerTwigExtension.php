@@ -8,11 +8,11 @@
  * @copyright Copyright (c) 2019 Mark Croxton
  */
 
-namespace croxton\imgixer\twigextensions;
+namespace vendbits\imgixer\twigextensions;
 
 use Craft;
 use craft\elements\Asset;
-use croxton\imgixer\Imgixer;
+use vendbits\imgixer\Imgixer;
 use Imgix\UrlBuilder;
 use yii\base\InvalidArgumentException;
 
@@ -61,7 +61,7 @@ class ImgixerTwigExtension extends \Twig_Extension
     public function __construct()
     {
         // get from config
-        $this->sources = \croxton\imgixer\Imgixer::getInstance()->settings->sources;
+        $this->sources = \vendbits\imgixer\Imgixer::getInstance()->settings->sources;
         $this->default_source = key($this->sources); // default to the first source defined
         $this->default_provider = 'imgix'; // the default image transformation service provider
     }
@@ -159,7 +159,7 @@ class ImgixerTwigExtension extends \Twig_Extension
 
         // Provider
         $provider  = isset($this->sources[$source]['provider']) ? (string) $this->sources[$source]['provider'] : $this->default_provider;
-        $providerClass = '\croxton\imgixer\providers\\' . ucfirst($provider) .'Provider';
+        $providerClass = '\vendbits\imgixer\providers\\' . ucfirst($provider) .'Provider';
 
         // Build URL using the selected provider
         return (new $providerClass())->getUrl($this->sources[$source], $asset, $params);
