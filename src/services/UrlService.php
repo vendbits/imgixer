@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 Mark Croxton
  */
 
-namespace croxton\imgixer\services;
+namespace vendbits\imgixer\services;
 
 use Craft;
 use craft\base\Component;
@@ -21,8 +21,8 @@ use craft\helpers\Image;
 use craft\models\AssetTransform;
 use craft\events\GetAssetThumbUrlEvent;
 
-use croxton\imgixer\models\SettingsModel;
-use croxton\imgixer\twigextensions\ImgixerTwigExtension;
+use vendbits\imgixer\models\SettingsModel;
+use vendbits\imgixer\twigextensions\ImgixerTwigExtension;
 
 class UrlService extends Component
 {
@@ -117,7 +117,7 @@ class UrlService extends Component
         $url = null;
         $params = [];
 
-        $transformSource = \croxton\imgixer\Imgixer::getInstance()->settings->transformSource;
+        $transformSource = \vendbits\imgixer\Imgixer::getInstance()->settings->transformSource;
 
         if ($asset && $transformSource) {
 
