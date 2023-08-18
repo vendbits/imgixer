@@ -1,10 +1,10 @@
 <?php
 
-namespace croxton\imgixer;
+namespace vendbits\imgixer;
 
 use Craft;
 use craft\elements\Asset;
-use croxton\imgixer\Imgixer;
+use vendbits\imgixer\Imgixer;
 use Imgix\UrlBuilder;
 
 abstract class AbstractProvider
