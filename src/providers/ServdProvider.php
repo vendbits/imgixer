@@ -1,11 +1,11 @@
 <?php
 
-namespace croxton\imgixer\providers;
+namespace vendbits\imgixer\providers;
 
 use Craft;
 use craft\elements\Asset;
-use croxton\imgixer\Imgixer;
-use croxton\imgixer\AbstractProvider;
+use vendbits\imgixer\Imgixer;
+use vendbits\imgixer\AbstractProvider;
 use Imgix\UrlBuilder;
 
 class ServdProvider extends AbstractProvider
