@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2019 Mark Croxton
  */
 
-namespace croxton\imgixer;
+namespace vendbits\imgixer;
 
 use Craft;
 use craft\base\Plugin;
@@ -18,8 +18,8 @@ use craft\events\GetAssetUrlEvent;
 use craft\events\GetAssetThumbUrlEvent;
 use craft\services\Assets;
 
-use croxton\imgixer\twigextensions\ImgixerTwigExtension;
-use croxton\imgixer\services\UrlService;
+use vendbits\imgixer\twigextensions\ImgixerTwigExtension;
+use vendbits\imgixer\services\UrlService;
 
 use yii\base\Event;
 
@@ -155,7 +155,7 @@ class Imgixer extends Plugin
 
     protected function createSettingsModel()
     {
-        return new \croxton\imgixer\models\Settings();
+        return new \vendbits\imgixer\models\Settings();
     }
 
 }
