@@ -1,6 +1,6 @@
 <?php
 
-namespace croxton\imgixer\models;
+namespace vendbits\imgixer\models;
 
 use craft\base\Model;
 
